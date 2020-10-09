@@ -11,6 +11,8 @@ import { Entypo } from "@expo/vector-icons";
 
 import colors from "../constants/colors";
 
+import { RowItem } from "../components/RowItem";
+
 const styles = StyleSheet.create({
   app: {
     paddingTop: 40,
@@ -36,10 +38,7 @@ const styles = StyleSheet.create({
 export default () => {
   return (
     <SafeAreaView style={styles.app}>
-      <TouchableOpacity style={styles.row}>
-        <Text style={styles.text}>Thing 1</Text>
-        <Entypo name="chevron-right" size={20} color={colors.blue} />
-      </TouchableOpacity>
+      <RowItem />
 
       <View style={styles.separator} />
 
