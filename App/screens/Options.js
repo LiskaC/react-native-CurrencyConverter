@@ -38,21 +38,26 @@ const styles = StyleSheet.create({
 export default () => {
   return (
     <SafeAreaView style={styles.app}>
-      <RowItem />
+      <RowItem
+        rightIcon={
+          <Entypo name="chevron-right" size={20} color={colors.blue} />
+        }
+        label="Theme"
+      />
 
       <View style={styles.separator} />
 
-      <TouchableOpacity style={styles.row}>
-        <Text style={styles.text}>Thing 2</Text>
-        <Entypo name="export" size={20} color={colors.blue} />
-      </TouchableOpacity>
+      <RowItem
+        rightIcon={<Entypo name="export" size={20} color={colors.blue} />}
+        label="Thing 2"
+      />
 
       <View style={styles.separator} />
 
-      <TouchableOpacity style={styles.row}>
-        <Text style={styles.text}>Thing 3</Text>
-        <Entypo name="chevron-down" size={20} color={colors.blue} />
-      </TouchableOpacity>
+      <RowItem
+        rightIcon={<Entypo name="chevron-down" size={20} color={colors.blue} />}
+        label="Thing 3"
+      />
     </SafeAreaView>
   );
 };
