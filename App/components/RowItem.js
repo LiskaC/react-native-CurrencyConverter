@@ -1,5 +1,5 @@
 import React from "react";
-import { TouchableOpacity, Text, StyleSheet } from "react-native";
+import { TouchableOpacity, Text, StyleSheet, View } from "react-native";
 import colors from "../constants/colors";
 
 const styles = StyleSheet.create({
@@ -9,6 +9,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
+    backgroundColor: "green",
   },
   separator: {
     backgroundColor: colors.border,
@@ -28,3 +29,5 @@ export const RowItem = ({ rightIcon, label, onPress }) => {
     </TouchableOpacity>
   );
 };
+
+export const RowSeparator = () => <View style={styles.separator} />;
