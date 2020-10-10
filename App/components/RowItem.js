@@ -20,9 +20,9 @@ const styles = StyleSheet.create({
   },
 });
 
-export const RowItem = ({ rightIcon, label }) => {
+export const RowItem = ({ rightIcon, label, onPress }) => {
   return (
-    <TouchableOpacity style={styles.row}>
+    <TouchableOpacity style={styles.row} onPress={onPress}>
       <Text style={styles.text}>{label}</Text>
       {rightIcon}
     </TouchableOpacity>

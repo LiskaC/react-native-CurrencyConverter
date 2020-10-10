@@ -29,10 +29,6 @@ const styles = StyleSheet.create({
     backgroundColor: colors.border,
     height: StyleSheet.hairlineWidth,
   },
-  text: {
-    fontSize: 20,
-    color: colors.text,
-  },
 });
 
 export default () => {
@@ -42,6 +38,7 @@ export default () => {
         rightIcon={
           <Entypo name="chevron-right" size={20} color={colors.blue} />
         }
+        onPress={() => alert("todo!")}
         label="Theme"
       />
 
@@ -49,6 +46,7 @@ export default () => {
 
       <RowItem
         rightIcon={<Entypo name="export" size={20} color={colors.blue} />}
+        onPress={() => alert("maybe!")}
         label="Thing 2"
       />
 
@@ -56,6 +54,7 @@ export default () => {
 
       <RowItem
         rightIcon={<Entypo name="chevron-down" size={20} color={colors.blue} />}
+        onPress={() => alert("yeahhhhh!")}
         label="Thing 3"
       />
     </SafeAreaView>
