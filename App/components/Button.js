@@ -15,6 +15,9 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     marginTop: 20,
+    backgroundColor: "#838dfd",
+    padding: 10,
+    borderRadius: 5,
   },
   buttonIcon: {
     height: 20,
@@ -22,7 +25,7 @@ const styles = StyleSheet.create({
     marginRight: 10,
   },
   buttonText: {
-
+    color: colors.white,
   }
 });
 
@@ -30,7 +33,7 @@ const styles = StyleSheet.create({
 export const Button = ({text, onPress}) => {
 return (
   <TouchableOpacity onPress={onPress} style={styles.button}>
-    <Image style={styles.buttonIcon}/>
+    <Image source={require("../assets/images/reverse.png")} style={styles.buttonIcon}/>
     <Text style={styles.buttonText}>{text}</Text>
   </TouchableOpacity>
 )

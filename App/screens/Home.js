@@ -1,5 +1,5 @@
 import React from "react";
-import { View, StyleSheet, StatusBar, Image, Dimensions, Button } from "react-native";
+import { View, StyleSheet, StatusBar, Image, Dimensions, Text } from "react-native";
 import {format} from "date-fns";
 
 import colors from "../constants/colors";
@@ -36,15 +36,15 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     marginVertical: 20,
   },
-  body: {
+  bodyText: {
     color: colors.white,
   },
 });
 
 export default () => {
-  const baseCurrency = USD;
+  const baseCurrency = "USD";
   const conversionRate = 0.343;
-  const quoteCurrency = GBP;
+  const quoteCurrency = "GBP";
   const date = new Date();
 
   return (
@@ -87,7 +87,7 @@ export default () => {
         {`1 ${baseCurrency} = ${conversionRate} ${quoteCurrency} as of ${format(date, "MMMM do, yyyy")}`}
         </Text>
 
-        <Button text="Reverse Currencies" onPress={() => alert("todo!")}/>
+      <Button text="Reverse Currencies" onPress={() => alert("todo!")}/>
     </View>
   );
 };
