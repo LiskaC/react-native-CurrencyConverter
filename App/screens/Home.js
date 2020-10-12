@@ -1,9 +1,11 @@
 import React from "react";
-import { View, StyleSheet, StatusBar, Image, Dimensions } from "react-native";
+import { View, StyleSheet, StatusBar, Image, Dimensions, Button } from "react-native";
+import {format} from "date-fns";
 
 import colors from "../constants/colors";
 
 import { ConversionInput } from "../components/ConversionInput";
+import { Button } from "../components/Button";
 
 const screen = Dimensions.get("window");
 
@@ -28,9 +30,23 @@ const styles = StyleSheet.create({
     width: screen.width * 0.25,
     height: screen.width * 0.25,
   },
+  header :{
+    color: colors.white,
+    fontSize: 20,
+    fontWeight: "bold",
+    marginVertical: 20,
+  },
+  body: {
+    color: colors.white,
+  },
 });
 
 export default () => {
+  const baseCurrency = USD;
+  const conversionRate = 0.343;
+  const quoteCurrency = GBP;
+  const date = new Date();
+
   return (
     <View style={styles.container}>
       <StatusBar
@@ -51,6 +67,8 @@ export default () => {
         />
       </View>
 
+<Text style={styles.header}>Currency Converter</Text>
+
       <ConversionInput
         text="USD"
         value="123"
@@ -62,7 +80,14 @@ export default () => {
         text="GBP"
         value="123"
         onButtonPress={() => alert("helllllloooo")}
+        editable={false}
       />
+
+      <Text style={styles.bodyText}>
+        {`1 ${baseCurrency} = ${conversionRate} ${quoteCurrency} as of ${format(date, "MMMM do, yyyy")}`}
+        </Text>
+
+        <Button text="Reverse Currencies" onPress={() => alert("todo!")}/>
     </View>
   );
 };
