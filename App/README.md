@@ -1,0 +1,2 @@
+- Home.js line 85 Currency Converter header text element refusing to center :"(
+- Cannot figure out debugger (currently event beign logged in the console but not in chrome window)

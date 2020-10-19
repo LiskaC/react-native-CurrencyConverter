@@ -12,7 +12,6 @@ import colors from "../constants/colors";
 const styles = StyleSheet.create({
   container: {
     backgroundColor: colors.white,
-    marginHorizontal: 20,
     marginVertical: 10,
     borderRadius: 10,
     flexDirection: "row",
